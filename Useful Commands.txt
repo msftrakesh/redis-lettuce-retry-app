@@ -1,0 +1,3 @@
+
+mvn clean compile  
+mvn exec:java "-Dexec.mainClass=msftrakesh.redis.lettuce.retry.RedisLettuceRetryApp"
