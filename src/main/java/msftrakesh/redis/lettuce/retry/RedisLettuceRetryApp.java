@@ -393,6 +393,7 @@ public class RedisLettuceRetryApp {
         // Perform the initial write
         writeDataAsync(key, value)
                 .thenAccept(result -> {
+                    firstFailureTime = -1; // Reset firstFailureTime after every successful operation 
                     log("Write successful for key: " + key);
                     future.complete(result); // Mark the future as completed successfully
                 })
@@ -427,6 +428,7 @@ public class RedisLettuceRetryApp {
         // Perform the initial read
         readDataAsync(key)
                 .thenAccept(result -> {
+                    firstFailureTime = -1; // Reset firstFailureTime after every successful operation 
                     log("Read successful for key: " + key);
                     future.complete(result); // Mark the future as completed successfully
                 })
