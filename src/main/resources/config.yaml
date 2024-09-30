@@ -4,9 +4,9 @@ app:
   name: redis-lettuce-retry-app
   version: 1.0.0
   settings:
-    redisHostName: "rakeshredis.redis.cache.windows.net"
+    redisHostName: "Your Server"
     redisPort: 6380
-    redisKey: "X60UaNDH0xdOThJbeSFurs0uCShKCiieHAzCaDDcV48="   
+    redisKey: "Your Key"   
     #Seconds
     reconnectMinInterval: 15 
     #Minutes
